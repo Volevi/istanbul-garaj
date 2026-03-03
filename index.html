@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>İstanbul Garaj</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#f8f4ee;--warm:#ede8e0;--brown:#2c1e0f;--mid:#6b4c2a;--gold:#c89a3c;--gold-light:#e8c06a;--text:#3a2d1e;--gray:#8a7d6e;--white:#fff;--shadow:rgba(44,30,15,0.12)}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--text);font-family:'Lato',sans-serif;overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--white);border-bottom:1px solid rgba(200,154,60,.2);display:flex;align-items:center;justify-content:space-between;padding:0 60px;height:70px;box-shadow:0 2px 20px var(--shadow)}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.li{width:38px;height:38px;background:var(--gold);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px}
+.lt{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--brown)}
+.lt span{color:var(--gold)}
+nav ul{list-style:none;display:flex;gap:32px}
+nav ul a{font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gray);text-decoration:none;transition:color .2s}
+nav ul a:hover{color:var(--gold)}
+.nc{background:var(--gold);color:var(--white);font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:10px 22px;text-decoration:none;border-radius:4px}
+.hero{margin-top:70px;min-height:88vh;display:grid;grid-template-columns:1fr 1fr;background:var(--white)}
+.hl{display:flex;flex-direction:column;justify-content:center;padding:80px}
+.htag{display:inline-flex;align-items:center;gap:8px;background:rgba(200,154,60,.1);border:1px solid rgba(200,154,60,.3);padding:6px 16px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:28px;width:fit-content}
+.htag::before{content:'';width:7px;height:7px;background:var(--gold);border-radius:50%;animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+h1{font-family:'Playfair Display',serif;font-size:clamp(42px,5vw,66px);font-weight:900;line-height:1.1;color:var(--brown);margin-bottom:16px}
+h1 em{color:var(--gold);font-style:normal}
+.hs{font-size:17px;font-weight:300;color:var(--gray);line-height:1.7;max-width:400px;margin-bottom:40px}
+.hb{display:flex;gap:14px;flex-wrap:wrap}
+.bg{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:var(--white);font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:14px 30px;text-decoration:none;border-radius:4px;transition:all .25s;box-shadow:0 4px 16px rgba(200,154,60,.35)}
+.bg:hover{background:var(--mid);transform:translateY(-2px)}
+.bo{display:inline-flex;align-items:center;gap:8px;border:2px solid var(--brown);color:var(--brown);font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:14px 30px;text-decoration:none;border-radius:4px;transition:all .25s}
+.bo:hover{background:var(--brown);color:var(--white)}
+.hr2{background:var(--brown);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 40px;position:relative;overflow:hidden}
+.hr2::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 70%,rgba(200,154,60,.15),transparent 60%)}
+.hcar{font-size:96px;position:relative;z-index:2;animation:float 5s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.hrat{margin-top:32px;background:rgba(255,255,255,.06);border:1px solid rgba(200,154,60,.3);border-radius:12px;padding:24px 36px;text-align:center;position:relative;z-index:2}
+.rnum{font-family:'Playfair Display',serif;font-size:52px;font-weight:900;color:var(--gold-light);line-height:1}
+.rstr{font-size:18px;color:var(--gold);letter-spacing:3px;margin:6px 0}
+.rlbl{font-size:12px;color:rgba(255,255,255,.45);letter-spacing:1px}
+.stats{background:var(--brown);display:grid;grid-template-columns:repeat(4,1fr)}
+.st{padding:32px 24px;border-right:1px solid rgba(255,255,255,.08);text-align:center;transition:background .2s}
+.st:last-child{border-right:none}
+.st:hover{background:rgba(200,154,60,.08)}
+.sn{font-family:'Playfair Display',serif;font-size:38px;font-weight:700;color:var(--gold-light)}
+.sl{font-size:10px;color:rgba(255,255,255,.4);letter-spacing:2px;text-transform:uppercase;margin-top:4px}
+section{padding:90px 80px}
+#hizmetler{background:var(--cream)}
+.sh{text-align:center;margin-bottom:56px}
+.stg{display:inline-block;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+h2{font-family:'Playfair Display',serif;font-size:clamp(30px,4vw,50px);font-weight:900;color:var(--brown)}
+.sl2{width:48px;height:3px;background:var(--gold);margin:14px auto 0;border-radius:2px}
+.sg{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.svc{background:var(--white);border-radius:12px;padding:38px 30px;transition:all .3s;border:1px solid transparent;box-shadow:0 2px 12px var(--shadow);position:relative;overflow:hidden}
+.svc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.svc:hover{transform:translateY(-6px);box-shadow:0 12px 32px rgba(44,30,15,.15)}
+.svc:hover::before{transform:scaleX(1)}
+.si{font-size:34px;margin-bottom:18px;display:block}
+.sn2{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:var(--brown);margin-bottom:10px}
+.sd{font-size:14px;color:var(--gray);line-height:1.7}
+#yorumlar{background:var(--warm)}
+.rg{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:44px}
+.rc{background:var(--white);border-radius:12px;padding:34px 30px;box-shadow:0 2px 12px var(--shadow);transition:transform .3s;position:relative}
+.rc::before{content:'"';font-family:'Playfair Display',serif;font-size:76px;color:var(--gold);opacity:.15;position:absolute;top:12px;right:22px;line-height:1}
+.rc:hover{transform:translateY(-4px)}
+.rst{color:var(--gold);font-size:16px;letter-spacing:2px;margin-bottom:14px}
+.rt{font-size:15px;color:var(--text);line-height:1.8;font-style:italic}
+.ra{margin-top:22px;display:flex;align-items:center;gap:12px}
+.rav{width:40px;height:40px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:15px;font-weight:700;color:var(--white)}
+.rn{font-size:14px;font-weight:700;color:var(--brown)}
+.rd{font-size:12px;color:var(--gray);margin-top:2px}
+#iletisim{background:var(--white)}
+.cg{display:grid;grid-template-columns:1fr 1fr;gap:44px;margin-top:52px}
+.hbox{background:var(--cream);border-radius:12px;padding:40px;border:1px solid rgba(200,154,60,.15)}
+.bt{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:var(--brown);margin-bottom:26px;display:flex;align-items:center;gap:10px}
+.hrw{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid rgba(200,154,60,.12)}
+.hrw:last-child{border-bottom:none}
+.hd{font-size:13px;font-weight:700;color:var(--mid)}
+.ht{font-size:14px;font-weight:700;color:var(--brown);display:flex;align-items:center;gap:8px}
+.op{display:inline-flex;align-items:center;gap:5px;background:rgba(200,154,60,.1);border:1px solid rgba(200,154,60,.3);color:var(--gold);font-size:10px;font-weight:700;letter-spacing:1px;padding:3px 10px;border-radius:20px}
+.op::before{content:'';width:5px;height:5px;background:var(--gold);border-radius:50%;animation:blink 2s infinite}
+.ib{display:flex;flex-direction:column;gap:18px}
+.ic{background:var(--cream);border-radius:12px;padding:26px 30px;border:1px solid rgba(200,154,60,.15);display:flex;gap:14px;align-items:flex-start;transition:box-shadow .2s}
+.ic:hover{box-shadow:0 4px 16px var(--shadow)}
+.ico{width:42px;height:42px;flex-shrink:0;background:var(--gold);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:17px}
+.il{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gray);margin-bottom:5px}
+.iv{font-size:15px;font-weight:700;color:var(--brown);line-height:1.5}
+.iv a{color:var(--gold);text-decoration:none}
+.ml{display:inline-flex;align-items:center;gap:8px;margin-top:10px;background:var(--brown);color:var(--white);font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:11px 22px;border-radius:6px;text-decoration:none;transition:background .2s}
+.ml:hover{background:var(--gold)}
+footer{background:var(--brown);color:rgba(255,255,255,.45);padding:32px 80px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
+.fb{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:var(--white)}
+.fb span{color:var(--gold)}
+.fl{display:flex;gap:18px}
+.fl a{font-size:12px;color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s}
+.fl a:hover{color:var(--gold)}
+@media(max-width:860px){nav{padding:0 20px}nav ul{display:none}.hero{grid-template-columns:1fr}.hr2{display:none}.hl{padding:56px 24px}.stats{grid-template-columns:repeat(2,1fr)}section{padding:60px 24px}.sg,.rg,.cg{grid-template-columns:1fr}footer{padding:24px;flex-direction:column;text-align:center}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="#" class="logo"><div class="li">🚗</div><div class="lt">İstanbul <span>Garaj</span></div></a>
+  <ul><li><a href="#hizmetler">Hizmetler</a></li><li><a href="#yorumlar">Yorumlar</a></li><li><a href="#iletisim">İletişim</a></li></ul>
+  <a href="tel:+905465595353" class="nc">📞 Ara</a>
+</nav>
+<section class="hero">
+  <div class="hl">
+    <div class="htag">Beykoz / İstanbul — Şu An Açık</div>
+    <h1>Arabanıza <em>Değer</em> Verin</h1>
+    <p class="hs">Beykoz'un en özenli araç yıkama hizmeti. Pasta cila kalitesinde temizlik, sıcak ve nezih bir ortam.</p>
+    <div class="hb">
+      <a href="tel:+905465595353" class="bg">📞 +90 546 559 53 53</a>
+      <a href="#iletisim" class="bo">Bizi Bul</a>
+    </div>
+  </div>
+  <div class="hr2">
+    <div class="hcar">🚙</div>
+    <div class="hrat"><div class="rnum">4.3</div><div class="rstr">★★★★☆</div><div class="rlbl">7 Google Yorumu</div></div>
+  </div>
+</section>
+<div class="stats">
+  <div class="st"><div class="sn">4.3</div><div class="sl">Google Puanı</div></div>
+  <div class="st"><div class="sn">7</div><div class="sl">Yorum</div></div>
+  <div class="st"><div class="sn">7/7</div><div class="sl">Gün Açık</div></div>
+  <div class="st"><div class="sn">16S</div><div class="sl">Günlük Hizmet</div></div>
+</div>
+<section id="hizmetler">
+  <div class="sh"><div class="stg">Ne Sunuyoruz</div><h2>Hizmetlerimiz</h2><div class="sl2"></div></div>
+  <div class="sg">
+    <div class="svc"><span class="si">🧼</span><div class="sn2">Dış Yıkama</div><p class="sd">Özenli ve detaylı dış yıkama. Arabanız pasta cila yapılmış gibi pırıl pırıl çıkar.</p></div>
+    <div class="svc"><span class="si">✨</span><div class="sn2">Pasta & Cila</div><p class="sd">Boya koruma ve parlaklık artırma. Aracınızın değerini koruyan profesyonel uygulama.</p></div>
+    <div class="svc"><span class="si">🧹</span><div class="sn2">İç Temizlik</div><p class="sd">Koltuklar, tavan, ön panel — her köşe özenle temizlenir. Nezih bir iç mekan garantisi.</p></div>
+    <div class="svc"><span class="si">💨</span><div class="sn2">Detaylı Temizlik</div><p class="sd">Özel ekipmanlarla hava çıkışları ve dar köşelere kadar eksiksiz temizlik yapılır.</p></div>
+    <div class="svc"><span class="si">🔲</span><div class="sn2">Lastik & Jant</div><p class="sd">Lastik parlatma ve jant temizliği. Aracınızın en görünür detayları kusursuz görünür.</p></div>
+    <div class="svc"><span class="si">🏆</span><div class="sn2">Komple Bakım</div><p class="sd">İç ve dış tüm hizmetleri kapsayan eksiksiz araç bakım paketi. Araç yeniden doğar.</p></div>
+  </div>
+</section>
+<section id="yorumlar">
+  <div class="sh"><div class="stg">Müşteriler Ne Diyor</div><h2>Yorumlar</h2><div class="sl2"></div></div>
+  <div class="rg">
+    <div class="rc"><div class="rst">★★★★★</div><p class="rt">"Gerçekten Beykoz'da en iyisi. Güzel temizliyorlar, özenerek. Burada yıkattığımda arabaya pasta cila yapmış gibi oluyor resmen. Başka yerler hiç özenmiyor."</p><div class="ra"><div class="rav">NY</div><div><div class="rn">Nur Yavan</div><div class="rd">9 ay önce</div></div></div></div>
+    <div class="rc"><div class="rst">★★★★★</div><p class="rt">"Nezih ve sıcak bir ortam. Aracına değer verenler mutlaka ziyaret etmeli. Ekip çok ilgili ve güler yüzlü."</p><div class="ra"><div class="rav">OA</div><div><div class="rn">Oğuzhan Aşık</div><div class="rd">1 yıl önce · Yerel Rehber</div></div></div></div>
+  </div>
+</section>
+<section id="iletisim">
+  <div class="sh"><div class="stg">Bize Ulaşın</div><h2>İletişim & Saatler</h2><div class="sl2"></div></div>
+  <div class="cg">
+    <div class="hbox">
+      <div class="bt">🕐 Çalışma Saatleri</div>
+      <div class="hrw"><span class="hd">Pazartesi</span><span class="ht">07:00–23:00 <span class="op">Açık</span></span></div>
+      <div class="hrw"><span class="hd">Salı</span><span class="ht">07:00–23:00</span></div>
+      <div class="hrw"><span class="hd">Çarşamba</span><span class="ht">07:00–23:00</span></div>
+      <div class="hrw"><span class="hd">Perşembe</span><span class="ht">07:00–23:00</span></div>
+      <div class="hrw"><span class="hd">Cuma</span><span class="ht">07:00–23:00</span></div>
+      <div class="hrw"><span class="hd">Cumartesi</span><span class="ht">07:00–23:00</span></div>
+      <div class="hrw"><span class="hd">Pazar</span><span class="ht">07:00–23:00</span></div>
+    </div>
+    <div class="ib">
+      <div class="ic"><div class="ico">📍</div><div><div class="il">Adres</div><div class="iv">Ortaçeşme, Çamlıbahçe, Ufuk Sk. No:8<br>34820 Beykoz / İstanbul</div><a href="https://maps.app.goo.gl/YsGGygxHyo9DP1ru9" target="_blank" class="ml">🗺️ Haritada Gör</a></div></div>
+      <div class="ic"><div class="ico">📞</div><div><div class="il">Telefon</div><div class="iv"><a href="tel:+905465595353">+90 546 559 53 53</a></div></div></div>
+      <div class="ic"><div class="ico">⭐</div><div><div class="il">Google Puanı</div><div class="iv">4.3 / 5.0 · 7 Yorum</div></div></div>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="fb">İstanbul <span>Garaj</span></div>
+  <div>© 2025 İstanbul Garaj · Beykoz, İstanbul</div>
+  <div class="fl"><a href="tel:+905465595353">Ara</a><a href="https://maps.app.goo.gl/YsGGygxHyo9DP1ru9" target="_blank">Harita</a></div>
+</footer>
+</body>
+</html>
